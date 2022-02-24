@@ -4,12 +4,18 @@
 package uf2181;
 
 /**
- * @author David
+ * @author MJotaCabezas
  *
  */
 public class FuncionesDGT {
 
-	public double mediaPuntos(int puntos[]) {
+	
+	/**
+	 * Función que introduces una lista de números y te devuelve un decimal de la media de todos.
+	 * @param puntos en forma de entero. La lista en forma de vector para introducir los números.
+	 * @return devuelve la media de esa lista, en forma decimal. 
+	 */
+	public static double mediaPuntos(int puntos[]) {
 		double suma = 0;
 		
 		for (int i = 0; i < puntos.length; i++) {
@@ -19,7 +25,14 @@ public class FuncionesDGT {
 		return suma/puntos.length;
 	}
 	
-	public double maximaTasaPermitida(String tipoConductor, boolean aire) {
+	
+	/**
+	 * Función que sirve para calcular qué tasa de aire tiene permitida según el tipo de conductor. Lo devuelve en forma de verdadero o falso.
+	 * @param tipoConductor String según general o profesionales y noveles.
+	 * @param aire como boolean, es decir, verdadero o falso.
+	 * @return double de la tasa según el tipo de conductor
+	 */
+	public static double maximaTasaPermitida(String tipoConductor, boolean aire) {
 		double tasa=0.25;
 		if (tipoConductor.equalsIgnoreCase("General")) {
 			if (aire) {

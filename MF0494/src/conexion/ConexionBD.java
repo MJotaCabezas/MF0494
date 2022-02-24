@@ -6,6 +6,9 @@ package conexion;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
+import java.util.ArrayList;
+
+import modelo.Infractores;
 
 /**
  * @author David
@@ -15,7 +18,7 @@ public class ConexionBD {
 
 	private static final String database = "dgt";
 	private static final String usuario = "root";
-	private static final String contraseña = "123456";
+	private static final String contraseña = "1401";
 	private static final String url="jdbc:mysql://localhost/"+database;
 	
 	private Connection conexion=null;
@@ -47,6 +50,11 @@ public class ConexionBD {
 		} catch (SQLException e) {
 			System.out.println("Erorr cerrrando la conexion "+ e.getMessage());
 		}
+	}
+
+	public static ArrayList<Infractores> mostrarInfractores() {
+		// TODO Esbozo de método generado automáticamente
+		return null;
 	}
 
 }
